@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>POV: CLICKASTE EN UNA PIEDRA</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+
+        <style>
+            body{
+                font-family: 'Roboto', sans-serif;
+            }
+        </style>
+    </head>
+
+    <body style="text-align: center;">
+        <h1>POV: CLICKAS EN UNA PIEDRA</h1>
+        <button id="botonClick"><img src="./imgs/practica3/piedra.png" height="450px"></button>
+        <p>Has clickado en una piedra. ¿Te has quedado con ganas?. Ahora clickala tantas veces como quieras.</p>
+        Clicks dados:
+        <p id="areaContador"></p>
+        <script type="text/javascript">
+            var botonElement = document.getElementById("botonClick");
+            var pElement = document.getElementById("areaContador");
+            var contador = 0;
+            botonElement.onclick = function () {
+                contador++;
+                pElement.textContent = contador;
+            }
+        </script>
+    </body>
+</html>
